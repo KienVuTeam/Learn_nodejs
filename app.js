@@ -1,6 +1,10 @@
 const express =require('express')
+const morgan = require('morgan')
 const app = express()
 const port =8000;
+// process.title = myApp;
+
+app.use(morgan('combined'))
 
 app.get('/', (req, res)=>{
     res.send('well to expressjs nodejs')
